@@ -15,14 +15,25 @@
         <div class="container">
             <div class="row">
               <div class="col-12 mt-4" style="text-align:center">
-                <h1 style="text-align:center">Nodestone Builder</h1>
-                <h5 style="text-align:center">By AethericSky of GMS Reboot</h5>
+                <h1 style="text-align:center" data-i18n="title">Nodestone Builder</h1>
+                <h5 style="text-align:center" data-i18n="by">By AethericSky of GMS Reboot</h5>
+              </div>
+              <div id="language-selector">
+                <label for="language">Select Language:</label>
+                <select id="languageSelector">
+                  <option value="en">English</option>
+                  <option value="th">ไทย</option>
+                  <!-- add other language-->
+                </select>
+
+                <script src="translations.js"></script>
+                
               </div>
               <div class="col-12 mt-4">
                 <table>
                   <thead>
                     <tr>
-                      <th>Select Job: </th>
+                      <th data-i18n="select job">Select Job: </th>
                       <th><select name="jobSelect" id="jobSelect" onchange="skillChange()">
                         <option value="">Select Job</option></th>
                       </select>
@@ -30,7 +41,7 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td id="openCVStatus">OpenCV is Loading</td>
+                      <td id="openCVStatus" data-i18n="openCVStatus">OpenCV is Loading</td>
                     </tr>
                   </tbody>
                 </table>
@@ -41,7 +52,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section1')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Tri-Node Skill Select</h3>
+                    <h3 style="text-align:left" data-i18n="tri-node-skill-select">Tri-Node Skill Select</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section1Arrow"></i>
@@ -54,7 +65,7 @@
                     <table class="table table-bordered" id="pickerNode">
                       <thead>
                         <tr>
-                          <th scope="col" colspan="5">Select Skills</th>
+                          <th scope="col" colspan="5" data-i18n="select-skill">Select Skills</th>
                         </tr>
                       </thead>
                       <tbody id="skillOption1">
@@ -68,7 +79,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section1p5')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Tri-Node Creator</h3>
+                    <h3 style="text-align:left" data-i18n="tri-node-creator">Tri-Node Creator</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section1p5Arrow"></i>
@@ -81,7 +92,7 @@
                     <table class="table table-bordered" id="pickerTriNode">
                       <thead>
                         <tr>
-                          <th scope="col" colspan="20">Select Skills</th>
+                          <th scope="col" colspan="20" data-i18n="select-skills">Select Skills</th>
                         </tr>
                         <tr>
                           <th scope="col">Skill</th>
@@ -113,7 +124,7 @@
                     <table class="table" id="pickerTriPreview">
                       <thead>
                         <tr>
-                          <th>Current Selection Preview</th>
+                          <th data-i18n="current-selection-preview">Current Selection Preview</th>
                           <th class="widthCreate2" id="previewPhoto">                                  
                             <img src="Images/MapleDivider.png" name="firstSlice" id="prev1a"/>
                             <img src="Images/MapleDivider.png" name="secondSlice" id="prev2a"/>
@@ -124,7 +135,7 @@
                           <th id="textSel2"></th>
                           <th id="textSel3"></th>
                           <th>
-                            <button type="button" class="btn btn-primary" onclick="addNodestone2()">Add Nodestone</button>
+                            <button type="button" class="btn btn-primary" onclick="addNodestone2()" data-i18n="add-node-stone">Add Nodestone</button>
                           </th>
                         </tr>
                       </thead>
@@ -136,7 +147,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section2')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Nodestone Collection</h3>
+                    <h3 style="text-align:left" data-i18n="nodestone-collection">Nodestone Collection</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section2Arrow"></i>
@@ -149,11 +160,11 @@
                     <table class="table" id="nodeList" name="sortable">
                         <thead>
                             <tr>
-                              <th scope="col">Trinode Skills</th>
+                              <th scope="col" data-i18n="tri-node-skills">Trinode Skills</th>
                               <th scope="col"> </th>
-                              <th scope="col">Node Score</th>
-                              <th scope="col">Add</th>
-                              <th scope="col">Delete</th>
+                              <th scope="col" data-i18n="node-score">Node Score</th>
+                              <th scope="col"data-i18n="Add">Add</th>
+                              <th scope="col" data-i18n="Delete">Delete</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -166,7 +177,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section3')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Current Trinode Setup</h3>
+                    <h3 style="text-align:left" data-i18n="current-trinode-setup">Current Trinode Setup</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section3Arrow"></i>
@@ -179,8 +190,8 @@
                     <table class="table" id="nodeCombo" name="sortable">
                       <thead>
                           <tr>
-                            <th scope="col" colspan="2">Trinode Skills</th>
-                            <th scope="col">Delete</th>
+                            <th scope="col" colspan="2" data-i18n="tri-node-skills">Trinode Skills</th>
+                            <th scope="col"data-i18n="Delete">Delete</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -191,17 +202,17 @@
                     <table class="table" id="controlCenter">
                       <thead>
                         <tr>
-                          <th scope="col" colspan="3">Trinode Builder Options</th>
+                          <th scope="col" colspan="3" data-i18n="tri-node-builder-option">Trinode Builder Options</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="printCombination()">Auto Build [Sync]</button></td>
-                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Async]</button></td>
-                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="autoButtonClick3()">Unequip All Trios</button></td>
+                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="printCombination()" data-i18n="autoBuild-sync">Auto Build [Sync]</button></td>
+                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="buildPerfectTri()" data-i18n="autoBuild-Async">Auto Build [Async]</button></td>
+                          <td scope="col"><button type="button" class="btn btn-primary" id="autoBuild" onclick="autoButtonClick3()" data-i18n="unequip-All-trios">Unequip All Trios</button></td>
                         </tr>
                         <tr>
-                          <td scope="col">Number of Copies per Skill</td>
+                          <td scope="col" data-i18n="number-of-copues">Number of Copies per Skill</td>
                           <td scope="col" colspan="2" class="centralizer">
                             <select name="copyNumber" id="copyNumber" onchange="numberChange()">
                               <option value=2>2</option>
@@ -217,24 +228,24 @@
                     <table class="table" id="nodeStatistics1">
                       <thead>
                           <tr>
-                            <th scope="col" colspan="2">Node Combination Statistics</th>
+                            <th scope="col" colspan="2" data-i18n="node-combine-stat">Node Combination Statistics</th>
                           </tr>
                       </thead>
                       <tbody>
                           <tr>
-                            <td scope="col"><strong>Total Skills Selected</strong></td>
+                            <td scope="col"><strong data-i18n="total-skills-select">Total Skills Selected</strong></td>
                             <td scope="col" name="skillCounter"></td>
                           </tr>
                           <tr>
-                            <td scope="col"><strong># of Slots(If All Perfect Trios)</strong></td>
+                            <td scope="col"><strong data-i18n="#-slots"># of Slots(If All Perfect Trios)</strong></td>
                             <td scope="col" name="bestOutcome"></td>
                           </tr>
                           <tr>
-                            <td scope="col"><strong>Node Slots Used</strong></td>
+                            <td scope="col"><strong data-i18n="node-slot-used">Node Slots Used</strong></td>
                             <td scope="col" name="nodeUsage"></td>
                           </tr>
                           <tr>
-                            <td scope="col"><strong>Node Efficiency</strong></td>
+                            <td scope="col"><strong data-i18n="node-efficiency">Node Efficiency</strong></td>
                             <td scope="col" name="nodeEfficiency"></td>
                           </tr>
                       </tbody>
@@ -242,9 +253,9 @@
                     <table class="table" id="nodeStatistics2" name="sortable">
                       <thead>
                           <tr>
-                            <th scope="col">Skill</th>
-                            <th scope="col">Selected</th>
-                            <th scope="col">Occupied Slots</th>
+                            <th scope="col" data-i18n="skill">Skill</th>
+                            <th scope="col" data-i18n="select">Selected</th>
+                            <th scope="col" data-i18n="Occupied">Occupied Slots</th>
                           </tr>
                       </thead>
                       <tbody>
@@ -258,7 +269,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section35')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Help</h3>
+                    <h3 style="text-align:left"data-i18n="help">Help</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-down-square-fill" style="line-height: inherit;" id="section35Arrow"></i>
@@ -266,113 +277,113 @@
                 </ul>
               </nav>
               <div class="container-fluid border collapse" id="section35">
-                <h3>How to use</h3>
+                <h3 data-i18n="how-to-use">How to use</h3>
                 <hr/>
-                <h5>1. Select the job you want to build your tri-nodes</h5>
-                <p>Click the dropdown box and select your class.</p>
+                <h5 data-i18n="1.">1. Select the job you want to build your tri-nodes</h5>
+                <p data-i18n="1.1">Click the dropdown box and select your class.</p>
                 <div class="container mx-auto text-center">
                   <img src="Images/step1.PNG" class="img-fluid" alt="Select your class">
                 </div>
-                <h5>2. Select the skills you need to build your tri-nodes around</h5>
-                <p>Click on the skills you want to select. Those highlighted in blue are currently selected.</p>
+                <h5 data-i18n="2.">2. Select the skills you need to build your tri-nodes around</h5>
+                <p data-i18n="2.1">Click on the skills you want to select. Those highlighted in blue are currently selected.</p>
                 <div class="container mx-auto text-center">
                   <img src="Images/step2.PNG" class="img-fluid" alt="Select your desired skills">
                 </div>
-                <h5>3. Create the tri-nodes you currently have.</h5>
-                <p>Create your tri-nodes by clicking the corresponding column beside the skill icon based on its location in your trinode (1 being the leading skill). Upon clicking "Add Nodestone", the created nodestone will be added to the list below.</p>
+                <h5 data-i18n="3.">3. Create the tri-nodes you currently have.</h5>
+                <p data-i18n="3-dec-1">Create your tri-nodes by clicking the corresponding column beside the skill icon based on its location in your trinode (1 being the leading skill). Upon clicking "Add Nodestone", the created nodestone will be added to the list below.</p>
                 <div class="container mx-auto text-center">
                   <img src="Images/step3.PNG" class="img-fluid" alt="Recreate the tri-nodes you own">
                 </div>
-                <h6><b><u>Created Nodestone Collection Legend</b></u></h6>
+                <h6><b><u data-i18n="3.2">Created Nodestone Collection Legend</b></u></h6>
                 <div class="container mx-auto text-center">
                   <img src="Images/step32.PNG" class="img-fluid" alt="Nodestone Collection UI">
                 </div>
                 <ol>
-                  <li>Shows the skills enhanced by the tri-node</li>
-                  <li>Shows the tri-node skill image</li>
-                  <li>Shows the Node Score</li>
-                  <li>Adds the tri-node to the "equipped" tri-nodes list</li>
-                  <li>Deletes the tri-node from the list (Available only when there are no tri-nodes equipped)</li>
+                  <li data-i18n="3.2.1">Shows the skills enhanced by the tri-node</li>
+                  <li data-i18n="3.2.2">Shows the tri-node skill image</li>
+                  <li data-i18n="3.2.3">Shows the Node Score</li>
+                  <li data-i18n="3.2.4">Adds the tri-node to the "equipped" tri-nodes list</li>
+                  <li data-i18n="3.2.3">Deletes the tri-node from the list (Available only when there are no tri-nodes equipped)</li>
                 </ol>
-                <h6><b><u>Node Score</b></u></h6>
-                <p>To facilitate the user in building their tri-node set, Each tri-node is given a score that updates based on the current nodestones equipped.</p>
+                <h6><b><u data-i18n="3.3">Node Score</b></u></h6>
+                <p data-i18n="3.3-dec-1">To facilitate the user in building their tri-node set, Each tri-node is given a score that updates based on the current nodestones equipped.</p>
                 <table class="table">
                   <thead>
                     <tr>
-                      <th scope="col">Score</th>
-                      <th scope="col">Meaning</th>
+                      <th scope="col" data-i18n="3.3-score">Score</th>
+                      <th scope="col" data-i18n="3.3-Meaning">Meaning</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td scope="col">6</td>
-                      <td scope="col">A Perfect Tri-Node</td>
+                      <td scope="col" data-i18n="3.3-Meaning-1">A Perfect Tri-Node</td>
                     </tr>
                     <tr>
                       <td scope="col">1-5</td>
-                      <td scope="col">The Tri-Node will not fully contribute to your desired tri-node set (Some skills may not be part of your desired list of skills or two copies of some of the skill are already present in your currently equipped tri-nodes)</td>
+                      <td scope="col" data-i18n="3.3-Meaning-2">The Tri-Node will not fully contribute to your desired tri-node set (Some skills may not be part of your desired list of skills or two copies of some of the skill are already present in your currently equipped tri-nodes)</td>
                     </tr>
                     <tr>
                       <td scope="col">0</td>
-                      <td scope="col">The Tri-Node contains no skill that is part of your desired skills to enhance</td>
+                      <td scope="col" data-i18n="3.3-Meaning-3">The Tri-Node contains no skill that is part of your desired skills to enhance</td>
                     </tr>
                     <tr>
-                      <td scope="col">-1 (In Use)</td>
-                      <td scope="col">The Tri-Node Is Currently Equipped</td>
+                      <td scope="col" data-i18n="3.3-1-in-use">-1 (In Use)</td>
+                      <td scope="col" data-i18n="3.3-Meaning-4">The Tri-Node Is Currently Equipped</td>
                     </tr>
                     <tr>
-                      <td scope="col">-1 (Leading Skill)</td>
-                      <td scope="col">The Tri-Node's Leading Skill is already present in your currently equipped tri-nodes</td>
+                      <td scope="col" data-i18n="3.3-1-leading skill">-1 (Leading Skill)</td>
+                      <td scope="col" data-i18n="3.3-Meaning-5">The Tri-Node's Leading Skill is already present in your currently equipped tri-nodes</td>
                     </tr>
                   </tbody>
                 </table>
-                <p><i>Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</i></p>
-                <h5>4. Equipped Nodes and Building your perfect trinode set</h5>
-                <p>You may unequip nodes by clicking the "Remove" button beside the currently equipped nodes</p>
+                <p><i data-i18n="3.3-tip">Tip: You can click the header (Trinode Skills, and Node Score) to sort the nodes in alphabetical order (A->Z or Z->A) or to sort the nodes based on their current node score (ascending or descending)</i></p>
+                <h5 data-i18n="4.">4. Equipped Nodes and Building your perfect trinode set</h5>
+                <p data-i18n="4.1.dec-1">You may unequip nodes by clicking the "Remove" button beside the currently equipped nodes</p>
                 <div class="container mx-auto text-center">
                   <img src="Images/step4.PNG" class="img-fluid" alt="Check and Unequip your tri-nodes">
                 </div>
-                <h6><b><u>Trinode Builder Options</u></b></h6>
-                <p>While manually equipping and unequipping trinodes is possible, you may want to try letting the program build the set of perfect trinodes for you.</p>
+                <h6><b><u data-i18n="4.2">Trinode Builder Options</u></b></h6>
+                <p data-i18n="4.2.dec-1">While manually equipping and unequipping trinodes is possible, you may want to try letting the program build the set of perfect trinodes for you.</p>
                 <div class="container mx-auto text-center">
                   <img src="Images/step42.PNG" class="img-fluid" alt="Trinode Builder Options">
                 </div>
                 <ol>
-                  <li>Automatically builds perfect trinode set for you.</li>
-                  <li>Automatically builds perfect trinode set for you. Same as Auto Build [Sync] but this delegates the building task to a web worker which should avoid browsers to Not Respond if there are too many nodes to build from.</li>
-                  <li>Removes all equipped trinodes.</li>
-                  <li>You may customize how many copies of each skill you would want in your trinode set (2-6)</li>
+                  <li data-i18n="4.2.1">Automatically builds perfect trinode set for you.</li>
+                  <li data-i18n="4.2.2">Automatically builds perfect trinode set for you. Same as Auto Build [Sync] but this delegates the building task to a web worker which should avoid browsers to Not Respond if there are too many nodes to build from.</li>
+                  <li data-i18n="4.2.3">Removes all equipped trinodes.</li>
+                  <li data-i18n="4.2.4">You may customize how many copies of each skill you would want in your trinode set (2-6)</li>
                 </ol>
-                <p><i>Tip: If you have perfect trinodes you want to incorporate in the build, equip them first before clicking Auto Build. Just press Ok to the alerts saying that the trinode is already equipped.</i></p>
-                <h6><b><u>Node Statistics</b></u></h6>
+                <p><i data-i18n="4.2-tip">Tip: If you have perfect trinodes you want to incorporate in the build, equip them first before clicking Auto Build. Just press Ok to the alerts saying that the trinode is already equipped.</i></p>
+                <h6><b><u data-i18n="4.3">Node Statistics</b></u></h6>
                 <div class="container mx-auto text-center">
                   <img src="Images/step42.PNG" class="img-fluid" alt="Node Statistics UI">
                 </div>
                 <ol>
-                  <li>Shows how many skills were selected.</li>
-                  <li>Gives an estimate of how many nodes it would take to most efficiently get 2 copies of each skill selected</li>
-                  <li>Shows how many node slots are currently used</li>
-                  <li>Shows how many node "skill slots"(3 per node) is used efficiently (i.e. The skill is selected the total copies of that skill in the equipped node slots do not exceed the number you specified)[Note: Only jobs that need "multiples of 3" amounts of boosted skills expect a 100% Node efficiency]</li>
-                  <li>Gives a breakdown of each skill and how many times it has already appeared in the equipped nodes.</li>
+                  <li data-i18n="4.3.1">Shows how many skills were selected.</li>
+                  <li data-i18n="4.3.2">Gives an estimate of how many nodes it would take to most efficiently get 2 copies of each skill selected</li>
+                  <li data-i18n="4.3.3">Shows how many node slots are currently used</li>
+                  <li data-i18n="4.3.4">Shows how many node "skill slots"(3 per node) is used efficiently (i.e. The skill is selected the total copies of that skill in the equipped node slots do not exceed the number you specified)[Note: Only jobs that need "multiples of 3" amounts of boosted skills expect a 100% Node efficiency]</li>
+                  <li data-i18n="4.3.5">Gives a breakdown of each skill and how many times it has already appeared in the equipped nodes.</li>
                 </ol>
-                <p><i>Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</i></p>
-                <h5>5. Saving and Loading</h5>
+                <p><i data-i18n="4.3-tip">Tip: You can click the header (Skill, Selected, Occupied Slots) to sort them in order</i></p>
+                <h5 data-i18n="5.">5. Saving and Loading</h5>
                 <div class="container mx-auto text-center">
                   <img src="Images/step5.PNG" class="img-fluid" alt="Save and Load Nodelist">
                 </div>
-                <p>By clicking the "Generate Nodelist" button, you can generate a list of the nodestones you currently have. Be sure to save it somewhere.</p>
-                <p>By pasting the generated text and clicking the "Load List" button, your nodes will automatically be loaded in.</p>
-                <h5>6. Loading Nodestones via images or snips</h5>
+                <p data-i18n="5-dec-1">By clicking the "Generate Nodelist" button, you can generate a list of the nodestones you currently have. Be sure to save it somewhere.</p>
+                <p data-i18n="5-dec-2">By pasting the generated text and clicking the "Load List" button, your nodes will automatically be loaded in.</p>
+                <h5 data-i18n="6.">6. Loading Nodestones via images or snips</h5>
                 <div class="container mx-auto text-center">
                   <img src="Images/step6.PNG" class="img-fluid" alt="Load Nodes from Photos">
                 </div>
-                <p>You may now also load trinodes you have using in-game snips or images.</p>
-                <p>Just use the snipping tool or screenshot the nodestone inventory from in-game. Ideally make sure to not include any skill nodes in the snip (this might, in rare cases, lead to false trinode creation). The program processes the images from top left to bottom right so if any skill node results in a false trinode, they should either be up top or at the very end of the nodelist. Do note that duplicate trinodes (where A = A, B = B, and C = C) would only appear once.</p>
-                <p>Make sure that no filters are applied or that the image is scaled as this would affect the detection of trinodes in a photo.</p>
-                <p>You may paste multiple images before clicking "Load via Photos" and the program will process them one after the other.</p>
-                <p>If you want to remove a photo you uploaded, just click the photo you want to remove.</p>
-                <p>Locked Trinodes should not pose a problem. If you do notice some issues, please try unlocking the trinodes and snap another photo.</p>
-                <p>A sample uploaded snip is shown below.</p>
+                <p data-i18n="6-dec-1">You may now also load trinodes you have using in-game snips or images.</p>
+                <p data-i18n="6-dec-2">Just use the snipping tool or screenshot the nodestone inventory from in-game. Ideally make sure to not include any skill nodes in the snip (this might, in rare cases, lead to false trinode creation). The program processes the images from top left to bottom right so if any skill node results in a false trinode, they should either be up top or at the very end of the nodelist. Do note that duplicate trinodes (where A = A, B = B, and C = C) would only appear once.</p>
+                <p data-i18n="6-dec-3">Make sure that no filters are applied or that the image is scaled as this would affect the detection of trinodes in a photo.</p>
+                <p data-i18n="6-dec-4">You may paste multiple images before clicking "Load via Photos" and the program will process them one after the other.</p>
+                <p data-i18n="6-dec-5">If you want to remove a photo you uploaded, just click the photo you want to remove.</p>
+                <p data-i18n="6-dec-6">Locked Trinodes should not pose a problem. If you do notice some issues, please try unlocking the trinodes and snap another photo.</p>
+                <p data-i18n="6-dec-7">A sample uploaded snip is shown below.</p>
                 <div class="container mx-auto text-center">
                   <img src="Images/step62.PNG" class="img-fluid" alt="Load Nodes from Photos">
                 </div>
@@ -383,7 +394,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section4')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Save or Load Nodelist</h3>
+                    <h3 style="text-align:left" data-i18n="save-or-load-nodelist">Save or Load Nodelist</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section4Arrow"></i>
@@ -395,8 +406,8 @@
                   <div class="col-12" id="saveLoad">
                     <textarea id="saveLoadArea" rows="8"></textarea>
                     <br/>
-                    <button type="button" class="btn btn-primary" onclick="genList()">Generate Nodelist</button>
-                    <button type="button" class="btn btn-primary" onclick="loadList()">Load Nodelist</button>
+                    <button type="button" class="btn btn-primary" onclick="genList()" data-i18n="generate-nodelist">Generate Nodelist</button>
+                    <button type="button" class="btn btn-primary" onclick="loadList()" data-i18n="load-nodelist">Load Nodelist</button>
                   </div>
                 </div>
               </div>
@@ -406,7 +417,7 @@
               <nav class="navbar navbar-expand-sm bg-primary navbar-dark nav-fill w-100" onclick="divcollapse('section45')">
                 <ul class="navbar-nav nav-fill w-100">
                   <li class="nav-item active">
-                    <h3 style="text-align:left">Load Nodes from Photo</h3>
+                    <h3 style="text-align:left" data-i18n="load-node-from-photo">Load Nodes from Photo</h3>
                   </li>
                   <li class="nav-item" style="text-align:right">
                     <i class="bi bi-caret-up-square-fill" style="line-height: inherit;" id="section45Arrow"></i>
@@ -416,11 +427,11 @@
               <div class="container-fluid border collapse show" id="section45">
                 <div class="row" style="padding-bottom:15px">
                   <div class="col-12" id="photoLoadContainer">
-                    <p>Snip or Copy the photo containing your ingame trinode and then click here and use Ctrl-V to paste your snips or image file. You can load multiple photos.</p>
-                    <p>Ideally ensure that only trinode photos are present and not skill nodes as they may trigger false matches. Ensure that the photo is not scaled or filtered in any way.</p>
-                    <p>Click the photo to remove them.</p>
+                    <p data-i18n="load-node-from-photo-dec-1">Snip or Copy the photo containing your ingame trinode and then click here and use Ctrl-V to paste your snips or image file. You can load multiple photos.</p>
+                    <p data-i18n="load-node-from-photo-dec-2">Ideally ensure that only trinode photos are present and not skill nodes as they may trigger false matches. Ensure that the photo is not scaled or filtered in any way.</p>
+                    <p data-i18n="load-node-from-photo-dec-3">Click the photo to remove them.</p>
                     <div class="col-12" id="uploadedPhotos" style="padding-bottom:15px"></div>
-                    <button type="button" class="btn btn-primary" id="photoRead" onclick="readPhotos()">Load via Photos</button>
+                    <button type="button" class="btn btn-primary" id="photoRead" onclick="readPhotos()" data-i18n="load-via-photo">Load via Photos</button>
                   </div>
                 </div>
               </div>
@@ -430,43 +441,43 @@
               <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Version Changes [Version 1.08]</h5>
+                    <h5 class="modal-title" id="modalTitle" data-i18n="versionInfo">Version Changes [Version 1.08]</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    <h2>New Feature</h2>
+                    <h2 data-i18n="new-feature">New Feature</h2>
                     <ul>
-                      <li>Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled or filtered.</li>
+                      <li data-i18n="new-feature-1">Nodestones can now be loaded from in game screenshots or snips. Just make sure that the image only contains trinodes to limit the number of false positives. Photo should also not be scaled or filtered.</li>
                     </ul>
                     <hr>
-                    <h2>Updated Features</h2>
+                    <h2 data-i18n="update-feature">Updated Features</h2>
                     <ul>
-                      <li>You can now specify how many copies of each skill you want in building your perfect trio setup.</li>
-                      <li>Help Section has now been updated to reflect all the recent changes.</li>
+                      <li data-i18n="update-feature-1">You can now specify how many copies of each skill you want in building your perfect trio setup.</li>
+                      <li data-i18n="update-feature-2">Help Section has now been updated to reflect all the recent changes.</li>
                     </ul>
                     <hr>
-                    <h2>Notable Changes</h2>
+                    <h2 data-i18n="Notable-change">Notable Changes</h2>
                     <ul>
-                      <li>Skill Names have been fixed for Blaster, Hoyoung, Kinesis, Marksman, Phantom, and Zero</li>
-                      <li>Skill Icons have been fixed for Kanna, Khali, Angelic Buster, Bishop, Ice Lightning Mage, Luminous, Xenon</li>
+                      <li data-i18n="Notable-change-1">Skill Names have been fixed for Blaster, Hoyoung, Kinesis, Marksman, Phantom, and Zero</li>
+                      <li data-i18n="Notable-change-2">Skill Icons have been fixed for Kanna, Khali, Angelic Buster, Bishop, Ice Lightning Mage, Luminous, Xenon</li>
                     </ul>
                     <hr>
-                    <p>Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md">Change Log</a> to check out the full and detailed list of changes.</p>
+                    <p data-i18n="Visit">Visit the <a href="https://github.com/PhantasmicSky/NodestoneBuilder/blob/main/CHANGELOG.md" data-i18n="changelog">Change Log</a> to check out the full and detailed list of changes.</p>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(false)">Close</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(true)">Close until new update</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(false)" data-i18n="close">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="modalCookie(true)" data-i18n="close-until-update">Close until new update</button>
                   </div>
                 </div>
               </div>
             </div>
             </br>
-            <button type="button" class="btn btn-primary" id="versionInfo" data-toggle="modal" data-target="#whatsNewModal">Version Notes</button>
-            <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="printCombination()">Auto Build</button>
-            <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="buildPerfectTri()">Auto Build [Web Worker]</button>
-            <button type="button" class="btn btn-primary invisible" onclick="checkVar()">Check Variables</button>
+            <button type="button" class="btn btn-primary" id="versionInfo" data-toggle="modal" data-target="#whatsNewModal" data-i18n="versionNotes">Version Notes</button>
+            <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="printCombination()"data-i18n="autoBuild">Auto Build</button>
+            <button type="button" class="btn btn-primary invisible" id="autoBuild" onclick="buildPerfectTri()" data-i18n="autoBuild-webworker">Auto Build [Web Worker]</button>
+            <button type="button" class="btn btn-primary invisible" onclick="checkVar()" data-i18n="checkVar">Check Variables</button>
         </div>
     </body>
     <script type="text/javascript"> 
